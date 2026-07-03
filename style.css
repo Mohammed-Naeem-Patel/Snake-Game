@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("Images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#scoreBox, #hiscoreBox{
+    position: absolute;
+    right: 40px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    background: rgba(0,0,0,.55);
+    backdrop-filter: blur(8px);
+    border:1px solid  rgba(255,255,255,.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    font-family: 'New Tegomin', serif;
+}
+
+#scoreBox{
+    top: 20px;
+}
+
+#hiscoreBox{
+    top: 90px;
+}
+
+#board{
+    width: min(90vmin,650px);
+    aspect-ratio: 1;
+    background: linear-gradient(135deg,#c8f7a1,#9ad57b);
+    border: 6px solid #1d3b12;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,.35), inset 0 0 20px rgba(255,255,255,.2);
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+
+.head{
+    position: relative;
+    background: linear-gradient(145deg,#43e97b,#38f9d7);
+    border: 2px solid #065f46;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(56,249,215,.6);
+    transform: scale(1.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.eye{
+    position:absolute;
+    width:24%;
+    height:24%;
+    background:white;
+    border-radius:50%;
+}
+
+.left-eye{
+    top:30%;
+    left:18%;
+}
+
+.right-eye{
+    top:30%;
+    right:18%;
+}
+
+.eye::after{
+    content:"";
+    position:absolute;
+    width:55%;
+    height:55%;
+    background:black;
+    border-radius:50%;
+    top:22%;
+    left:22%;
+}
+
+.mouth{
+    position: absolute;
+    width: 40%;
+    height: 12%;
+    border-bottom: 2px solid black;
+    border-radius: 50%;
+    bottom: 18%;
+    left: 30%;
+}
+
+.mouth::after{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 70%;
+    background: #ff4d6d;
+    border-radius: 0 0 50% 50%;
+    left: 40%;
+    top: 100%;
+}
+
+.snake{
+    background: linear-gradient(145deg,#22c55e,#16a34a);
+    border: .18vmin solid #0f5132;
+    border-radius: 10px;
+}
+
+.food{
+    background: radial-gradient(circle,#ff5f6d,#ffc371);
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: pulse .8s infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform:scale(.85);
+    }
+    to{
+        transform:scale(1.15);
+    }
+}
+
+@media(max-width:768px){
+
+    #board{
+        width:95vw;
+    }
+    #scoreBox,
+    #hiscoreBox{
+        position:static;
+        margin:10px;
+        font-size:1.1rem;
+    }
+
+    .body{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+}
