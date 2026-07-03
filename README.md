@@ -10,11 +10,11 @@ The project focuses on strengthening JavaScript fundamentals by implementing gam
 
 ### 💻 Desktop View
 
-![Snake Game Desktop Demo](Images/snake-game-demo.png)
+![Snake Game Desktop Demo](Images/Snake-Game-Demo.png)
 
 ### 📱 Mobile View
 
-![Snake Game Mobile Demo](Images/snake-game-mobile-demo.png)
+![Snake Game Mobile Demo](Images/Snake-Game-Mobile-Demo.png)
 
 ---
 
